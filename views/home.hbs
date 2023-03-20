@@ -1,0 +1,15 @@
+<h3>Upload File <span>(tối đa 5MB)</span></h3>
+<hr />
+<form action="/uploadFile" method="post" enctype="multipart/form-data">
+  <input type="file" name="myFile" value="No File Chosen" />
+  <input type="submit" />
+</form>
+<h3>Upload Multiple File (tối đa 10 file)</h3>
+<hr />
+<form action="/uploadFiles" method="post" enctype="multipart/form-data">
+  <input type="file" name="myFiles" value="No Files Chosen" multiple />
+  <input type="submit" />
+</form>
+{{#if checkUpLoad}}
+  <h3>{{mess}}</h3>
+{{/if}}
